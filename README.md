@@ -1,5 +1,3 @@
-**Signals Shop**
-
 **Signals Shop** is a completed project developed as part of the NGRX Signal Store course.
 
 **Project Overview**
