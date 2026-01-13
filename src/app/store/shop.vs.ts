@@ -10,6 +10,7 @@ export interface CartVm {
   readonly subtotal: number;
   readonly tax: number;
   readonly total: number;
+  readonly itemsCount: number;
   readonly isActive: boolean;
   readonly isVisible: boolean;
 }

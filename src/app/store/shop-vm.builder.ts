@@ -30,15 +30,16 @@ export function buildCartVm(
   const subtotal = items.reduce((sum, item) => sum + item.total, 0);
   const tax = subtotal * taxRate;
   const total = subtotal + tax;
-  const intemsCount = items.length;
+  const itemsCount = items.length;
   const isVisible = cartVisible;
-  const isActive = intemsCount > 0;
+  const isActive = itemsCount > 0;
 
   return {
     items,
     subtotal,
     tax,
     total,
+    itemsCount,
     isActive,
     isVisible,
   };
