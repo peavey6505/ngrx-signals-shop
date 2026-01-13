@@ -1,0 +1,24 @@
+<div class="overlay"></div>
+<div class="content">
+  <h1>Your Cart ({{ cartItems().length }} items)</h1>
+  <div class="items">
+    @for (item of cartItems(); track item.id) {
+    <app-cart-item [item]="item" />
+    <hr />
+    }
+  </div>
+  <div class="subtotal">
+    <div class="label">Subtotal:</div>
+    <div class="value">{{ subtotal() | currency }}</div>
+  </div>
+  <div class="tax">
+    <div class="label">Tax:</div>
+    <div class="value">{{ tax() | currency }}</div>
+  </div>
+  <div class="total">
+    <div class="label">Total:</div>
+    <div class="value">{{ total() | currency }}</div>
+  </div>
+  <div class="actions">
+    <button mat-flat-button>Checkout</button>
+</div>

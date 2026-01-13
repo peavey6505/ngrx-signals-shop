@@ -1,0 +1,12 @@
+<mat-icon class="logo">sensors</mat-icon>
+<span>The Signals Shop</span>
+<input type="search" 
+    placeholder="search" 
+    [(ngModel)]="searchValue"/>
+<button mat-icon-button class="cart-button"
+    [matBadge]="cartCount()"
+    [matBadgeHidden]="!cartActive()"
+    [disabled]="!cartActive()"
+    >
+    <mat-icon class="cart">shopping_cart</mat-icon>
+</button>

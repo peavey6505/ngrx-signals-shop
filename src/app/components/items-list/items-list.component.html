@@ -1,0 +1,7 @@
+<h1>{{products().length}} Results</h1>
+<div class="results">
+    @for(product of products(); track product.id) {
+        <app-item-card [product]="product"/>
+        @if (!$last) {<div class="divider"></div>}
+    }    
+</div>

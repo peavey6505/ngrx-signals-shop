@@ -1,0 +1,87 @@
+:host { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 55px 5px;
+
+    .overlay {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .content {
+        padding: 20px;        
+        background-color: var(--s-fixed);
+        border: 1px solid var(--s-on-fixed-2);
+        box-shadow: var(--mat-sys-level5);
+        border-radius: var(--mat-sys-corner-extra-small);
+        z-index: 2;
+        width: calc(100% - 100px);
+        max-width: 600px;
+        max-height: 100%;
+
+
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        gap: 30px;
+
+        h1 {
+            font: var(--mat-sys-headline-medium);
+            align-self: center;
+            margin-bottom: 20px;
+            color: var(--p-30);
+        }
+
+        .items {
+            display: flex;
+            flex-direction: column;
+
+            hr {
+                margin: 10px 0;
+                border: none;
+                border-top: 1px solid var(--s-on-fixed-2);
+            }
+
+        }
+
+        .subtotal, .tax, .total {
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+            align-self: flex-end;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--s-on-fixed-2);
+            padding: 15px 0px;
+
+            .label {
+                font: var(--mat-sys-title-medium);
+            }
+        }
+
+        .total {
+            .value {
+                font: var(--mat-sys-headline-small);
+                color: var(--p);
+            }
+        }
+
+        .actions {
+            align-self: flex-end;
+
+            button {
+                border-radius: var(--mat-sys-corner-extra-small);
+                width: 200px;
+            }
+        }
+        
+    }
+}
