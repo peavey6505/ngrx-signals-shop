@@ -9,6 +9,8 @@ export interface ShopSlice {
   readonly taxRate: number;
 }
 
+export type PersistedShopSlice = Pick<ShopSlice, 'cartQuantities'>;
+
 export const initialShopSlice: ShopSlice = {
   products: ALL_PRODUCTS,
   searchWord: '',
