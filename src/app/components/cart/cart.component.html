@@ -1,7 +1,7 @@
 <!-- do it here because subscribe only once here -->
 @let vm = store.cartVm();
 
-<div class="overlay"></div>
+<div class="overlay" (click)="store.hideCart()"></div>
 <div class="content">
   <h1>Your Cart ({{ vm.itemsCount }} items)</h1>
   <div class="items">
@@ -23,6 +23,12 @@
     <div class="value">{{ vm.total | currency }}</div>
   </div>
   <div class="actions">
-    <button mat-flat-button>Checkout</button>
+    <button
+      mat-flat-button
+      [disabled]="!vm.canCheckout"
+      (click)="store.checkoutCart()"
+    >
+      Checkout
+    </button>
   </div>
 </div>

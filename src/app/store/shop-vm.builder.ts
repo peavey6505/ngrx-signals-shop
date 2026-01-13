@@ -1,6 +1,6 @@
 import { CartItemVm } from '../components/cart/view-model/cart-item.vm';
 import { Product } from '../models/product.model';
-import { CartVm, ProductListVm } from './shop.vs';
+import { CartVm, ProductListVm } from './shop.vm';
 
 export function buildProductListVm(
   products: Product[],
@@ -11,6 +11,7 @@ export function buildProductListVm(
 
   function buildProductItems() {
     const word = searchWord.trim().toLowerCase();
+
     return products
       .filter((product) => product.name.toLocaleLowerCase().includes(word))
       .map((product) => ({
@@ -33,6 +34,7 @@ export function buildCartVm(
   const itemsCount = items.length;
   const isVisible = cartVisible;
   const isActive = itemsCount > 0;
+  const canCheckout = isActive;
 
   return {
     items,
@@ -42,6 +44,7 @@ export function buildCartVm(
     itemsCount,
     isActive,
     isVisible,
+    canCheckout,
   };
 
   function buildCartItems(): CartItemVm[] {
