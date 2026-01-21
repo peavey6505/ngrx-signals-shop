@@ -14,7 +14,7 @@ export const ShopStore = signalStore(
   { providedIn: 'root' },
   withState(initialShopSlice),
   withComputed((store) => ({
-    shopVm: computed(() =>
+    vm: computed(() =>
       buildShopVm(store.cartVisible(), store.cartQuantities()),
     ),
   })),

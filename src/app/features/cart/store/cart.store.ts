@@ -10,7 +10,7 @@ export const CartStore = signalStore(
     _shopStore: inject(ShopStore), // taken from higher level store
   })),
   withComputed((store) => ({
-    cartVm: computed(() => {
+    vm: computed(() => {
       return buildCartVm(
         store._shopStore.products(),
         store._shopStore.cartQuantities(),

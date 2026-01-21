@@ -10,7 +10,7 @@ export const ProductListStore = signalStore(
     _shopStore: inject(ShopStore), //taken from higher level store
   })),
   withComputed((store) => ({
-    cvm: computed(() =>
+    vm: computed(() =>
       buildProductListVm(
         store._shopStore.products(),
         store._shopStore.searchWord(),
