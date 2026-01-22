@@ -9,7 +9,8 @@ The app features an inventory of fictional signal-related products. Users can br
 **NGRX Features Used**
 
 The project includes key NGRX concepts such as:
-- core state and store definition,
-- derived state (view models),
-- state updates using updaters,
-- cart persistence implemented with hooks.
+- single source of truth
+- core state and store definition
+- derived state (view models)
+- state updates using updaters
+- cart persistence implemented with hooks
